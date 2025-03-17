@@ -1,6 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npm run start",
+  "functions": {
+    "index.js": {
+      "external": ["ws", "express", "lodash"]
+    }
+  },
   "builds": [
     {
       "src": "index.js",

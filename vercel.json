@@ -1,19 +1,16 @@
 {
   "version": 2,
+  "buildCommand": "npm install && npm run start",
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node@latest"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
+      "src": "index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "src": "/(.*)",
+      "dest": "/index.js"
     }
   ]
 }

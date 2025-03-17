@@ -32,7 +32,7 @@ if (cluster.isMaster) {
   console.log(`Worker ${process.pid} started`);
 
   const handler = function (req, res) {
-    if (req.url == "/") {
+    if (req.url == "/dstat") {
       process.send(0);
       res.end();
     } else {
